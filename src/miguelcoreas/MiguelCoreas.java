@@ -66,21 +66,21 @@ public class MiguelCoreas {
                 {
                 JOptionPane.showMessageDialog(null,"Registro ["+i+1+"]\n"+
                                                    "Nombre: "+nombre[i]+
-                                                "\n Salario: "+(nf,salarioC[i])+
-                                                "\n Planilla: "+(nf,planilla[i])+
-                                                "\n Salario Final(Con bonos y descuento): "+(nf,salFinal[i]),"Datos",1);
+                                                "\n Salario: "+salarioC[i]+
+                                                "\n Planilla: "+planilla[i]+
+                                                "\n Salario Final(Con bonos y descuento): "+salFinal[i],"Datos",1);
                 }
-                JOptionPane.showMessageDialog(null,"Cantidad total de bonos a pagar por la empresa: "+(nf,cBonos));
+                JOptionPane.showMessageDialog(null,"Cantidad total de bonos a pagar por la empresa: "+cBonos);
                 JOptionPane.showMessageDialog(null,"Cantidad de Empleados que superan salarios de $700: "+cSal);
                 }else
                 {
-                    JOptionPane.showMessageDialog(null,"Ingrese un registro antes",3);
+                    JOptionPane.showMessageDialog(null,"Ingrese un registro antes","Alerta",3);
                 }
             default:
                 
-                if(menu!3)
+                if(menu!=3)
                 {
-                JOptionPane.showMessageDialog(null,"Ingrese una opcion correcta",3);
+                JOptionPane.showMessageDialog(null,"Ingrese una opcion correcta","Alerta",3);
                 }
         }   
                 
