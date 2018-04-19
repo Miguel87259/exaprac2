@@ -63,7 +63,7 @@ public class MiguelCoreas {
                 
                 if(nIng>0)
                 {
-                for(int i=0; i<=nIng;i++)
+                for(int i=0; i<nIng;i++)
                 {
                 JOptionPane.showMessageDialog(null,"Registro ["+i+1+"]\n"+
                                                    "Nombre: "+nombre[i]+
