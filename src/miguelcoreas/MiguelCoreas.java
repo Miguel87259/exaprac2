@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 /**
  * Nombre de la Clase: MiguelCoreas
  * Fecha: 19/04/2018
- * Version: 1.0
+ * Version: 2.0
  * CopyRight: MiguelCoreas
  * @author Miguel Coreas
  */
@@ -31,7 +31,7 @@ public class MiguelCoreas {
         
         
         do{
-            menu = Integer.parseInt(JOptionPane.showInputDialog(null," [1] - Agregar Empleado \n [2] - Calcular planilla \n [3] - Salir","Menu",1));
+        menu = Integer.parseInt(JOptionPane.showInputDialog(null," [1] - Agregar Empleado \n [2] - Calcular planilla \n [3] - Salir","Menu",1));
         switch(menu){
             case 1:
               nombre[nIng] = JOptionPane.showInputDialog(null,"Ingrese nombre del Empleado: ","Datos",1);
@@ -58,30 +58,33 @@ public class MiguelCoreas {
               }
               
               nIng++;
-              
+              break;
             case 2:
+                
                 if(nIng>0)
                 {
-                for(int i=0; i<=nIng;i++)
+                for(int i=0; i<nIng;i++)
                 {
                 JOptionPane.showMessageDialog(null,"Registro ["+i+1+"]\n"+
                                                    "Nombre: "+nombre[i]+
-                                                "\n Salario: "+(nf,salarioC[i])+
-                                                "\n Planilla: "+(nf,planilla[i])+
-                                                "\n Salario Final(Con bonos y descuento): "+(nf,salFinal[i]),"Datos",1);
+                                                "\n Salario: "+salarioC[i]+
+                                                "\n Planilla: "+planilla[i]+
+                                                "\n Salario Final(Con bonos y descuento): "+salFinal[i],"Datos",1);
                 }
-                JOptionPane.showMessageDialog(null,"Cantidad total de bonos a pagar por la empresa: "+(nf,cBonos));
+                JOptionPane.showMessageDialog(null,"Cantidad total de bonos a pagar por la empresa: "+cBonos);
                 JOptionPane.showMessageDialog(null,"Cantidad de Empleados que superan salarios de $700: "+cSal);
                 }else
                 {
-                    JOptionPane.showMessageDialog(null,"Ingrese un registro antes",3);
+                    JOptionPane.showMessageDialog(null,"Ingrese un registro antes","Alerta",3);
                 }
+                break;
             default:
                 
-                if(menu!3)
+                if(menu!=3)
                 {
-                JOptionPane.showMessageDialog(null,"Ingrese una opcion correcta",3);
+                JOptionPane.showMessageDialog(null,"Ingrese una opcion correcta","Alerta",3);
                 }
+                break;
         }   
                 
             
